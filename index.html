@@ -22,11 +22,44 @@
 		 
 	</head>
 	<body>
-		<script src="main.js"></script>
 
 		<div class="container">
-			<h1>testing</h1>
+			<h1>Testing Pulling Information From Database</h1>
+			<table>
+				<thead>
+					<tr>
+						<td>
+							Amount ded
+						</td>
+						<td>Amounter other injuries</td>
+
+					</tr>
+				</thead>
+				<tbody id="table_body">
+					
+				</tbody>
+			</table>
+
 		</div>
+	
+		<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
+		<script>			  // Initialize Firebase
+			var config = {
+			apiKey: "AIzaSyCtYyU4MUK-8e9fHPVZUlSjwtoQqcW6kYk",
+			authDomain: "gentelellapractice.firebaseapp.com",
+			databaseURL: "https://gentelellapractice.firebaseio.com",
+			projectId: "gentelellapractice",
+			storageBucket: "",
+			messagingSenderId: "649034621125"
+		  };
+		  firebase.initializeApp(config);
+		</script>
+			
+	
+		<script src="main.js"></script>
+
+		<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+		
 
 	</body>
 
