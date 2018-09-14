@@ -109,7 +109,7 @@ var chart = new Chart(myChart, {
   data: {
     labels: [2009, 2010, 2011],
     datasets: [{
-      label: 'Accidents',
+      label: '2009',
       data: [
         35, 1, 1
       ],
@@ -131,7 +131,7 @@ var chart = new Chart(myChart, {
   },
   options: {
     legend: {
-      display: false,
+      display: true,
       position: 'right',
       labels: {
         fontColor: '#000'
