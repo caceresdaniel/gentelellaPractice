@@ -4,10 +4,9 @@ var count2k11 = 0;
 
 var ref = firebase.database().ref("Accidents");
 
-// ref.child("ACCIDENT_YEAR").equalTo(2009).on("child_added", function () {
-//   count2k9++;
-  
-// });
+ref.child("ACCIDENT_YEAR").equalTo(2009).on("child_added", function () {
+  count2k9++;
+});
 ref.orderByChild("ACCIDENT_YEAR").equalTo(2010).on("child_added", function () {
   count2k10++;
 });
@@ -43,41 +42,52 @@ rootRef.on("child_added", snap => {
 
   $("#table_body").append("<tr><td>" + year + "</td><td>" + alcohol + "</td><td>" + bicycle + "</td><td>" + city + "</td><td>" + sev + "</td><td>" + day
     + "</td><td>" + injured + "</td><td>" + killed + "</td><td>" + pedinj + "</td><td>" + count2k9 + "</td><tr>");
-
 });
 
 
-ref.orderByChild('ACCIDENT_YEAR').equalTo(2009).once('value').then(function(snapshot) {
-  var value = snapshot.val();
-  if(value){
-    count2k9++;
-    console.log(count2k9);
-  } else {
-    res.status(401).json({
-      error: 'Nothing Found',
-    });
-  }
-});
+// ref.child('ACCIDENT_YEAR').once('value').then(function(snapshot) {
+//   var value = snapshot.val();
+//   if(value == 2009){
+//     count2k9++;
+//     console.log(count2k9);
+//   } else {
+//       error: 'Nothing Found';
+//   }
+// });
+
+// var value = 0;
+// ref.once('value').then(function(snapshot){
+//   value = snapshot.val();
+
+//   return ref.child('ACCIDENT_YEAR').transaction(function(current){
+//     return (current || 0 ) + 1;
+//   });
+// }).then(function(readCountTxn){
+//   return count2k9++;
+// }, function(error){
+//   console.error(error);
+// });
 
 
 
-  var myChart = document.getElementById('myChart').getContext('2d');
 
-  // Global Options
+var myChart = document.getElementById('myChart').getContext('2d');
+
+  
   Chart.defaults.global.defaultFontFamily = 'Lato';
   Chart.defaults.global.defaultFontSize = 18;
   Chart.defaults.global.defaultFontColor = '#777';
 
   var chart = new Chart(myChart, {
-    type: 'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
+    type: 'pie', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
     data: {
       labels: [2009, 2010, 2011],
       datasets: [{
         label: 'Accidents',
         data: [
-          count2k9, 1, 1
+          35, 1, 1
         ],
-        //backgroundColor:'green',
+        
         backgroundColor: [
           'rgba(255, 99, 132, 0.6)',
           'rgba(54, 162, 235, 0.6)',

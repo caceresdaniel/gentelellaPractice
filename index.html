@@ -9,6 +9,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Gentelella</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 
   <!-- Bootstrap -->
   <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -141,7 +142,8 @@
                   </ul>
                   </li>
                   <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming
-                        Soon</span></a></li>
+                        Soon
+                      </span></a></li>
               </ul>
             </div>
 
@@ -310,7 +312,7 @@
                 </div>
 
                 <canvas id="myChart"></canvas>
-
+                <script id="plswork"></script>
               </div>
             </div>
 
@@ -319,20 +321,18 @@
             <div>
               <table class="table table-stripped">
                 <thead>
-                  <h3 id="pe">joasdf
-                    <h3>
-                      <tr>
-                        <td>year</td>
-                        <td>alcohol</td>
-                        <td>bicycle</td>
-                        <td>city</td>
-                        <td>severity</td>
-                        <td>day</td>
-                        <td>injured</td>
-                        <td>killed</td>
-                        <td>pedestrin injury</td>
-                        <td>pedestrian kill</td>
-                      </tr>
+                  <tr>
+                    <td>year</td>
+                    <td>alcohol</td>
+                    <td>bicycle</td>
+                    <td>city</td>
+                    <td>severity</td>
+                    <td>day</td>
+                    <td>injured</td>
+                    <td>killed</td>
+                    <td>pedestrin injury</td>
+                    <td>pedestrian kill</td>
+                  </tr>
                 </thead>
                 <tbody id="table_body"></tbody>
               </table>
